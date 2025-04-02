@@ -13,8 +13,8 @@ def home():
 				"Implements Random Forest and Logistic Regression models, featuring an interactive form and dynamic gauge visualization built with Streamlit."
 			),
 			"skills": "Python, Scikit-learn, Streamlit, Pandas, Matplotlib",
-			"link": "https://example.com/loan-demo",
-			"github": "https://github.com/yourusername/loan-eligibility-app"
+			"link": "https://loan-eligibility-prediction-djdstcprojdapfxugpdqwi.streamlit.app/",
+			"github": "https://github.com/AhmedOT22/Loan-Eligibility-Prediction/tree/main"
 		},
 		{
 			"title": "Real Estate Price Prediction",
@@ -23,8 +23,8 @@ def home():
 				"Includes data preprocessing, EDA visualizations, and a Streamlit-based UI for interactive predictions."
 			),
 			"skills": "Python, Scikit-learn, Pandas, Streamlit, Matplotlib",
-			"link": "https://example.com/real-estate",
-			"github": "https://github.com/yourusername/real-estate-price-predictor"
+			#"link": "https://example.com/real-estate",
+			#"github": "https://github.com/AhmedOT22/real-estate-price-predictor"
 		},
 		{
 			"title": "Mall Customer Segmentation",
@@ -33,8 +33,8 @@ def home():
 				"Optimal cluster count determined using the Elbow Method and Silhouette Score. Includes a simple interactive dashboard in Streamlit."
 			),
 			"skills": "Python, Scikit-learn, Matplotlib, Streamlit",
-			"link": "https://example.com/mall-segmentation",
-			"github": "https://github.com/yourusername/mall-customer-segmentation"
+			#"link": "https://example.com/mall-segmentation",
+			#"github": "https://github.com/AhmedOT22/mall-customer-segmentation"
 		},
 		{
 			"title": "UCLA Admission Prediction",
@@ -43,8 +43,8 @@ def home():
 				"The project includes explainability using SHAP values, an interactive input form, and visual feedback via Streamlit."
 			),
 			"skills": "Python, TensorFlow, Keras, SHAP, Streamlit",
-			"link": "https://example.com/ucla-admissions",
-			"github": "https://github.com/yourusername/ucla-admission-predictor"
+			#"link": "https://example.com/ucla-admissions",
+			#"github": "https://github.com/AhmedOT22/ucla-admission-predictor"
 		},
 		{
 			"title": "Air Quality Forecasting",
@@ -54,7 +54,7 @@ def home():
 				"Created interactive visualizations to analyze trends."
 			),
 			"skills": "Alteryx, Python, Pandas, Power BI, ETS",
-			"link": "https://example.com/air-quality-demo",
+			#"link": "https://example.com/air-quality-demo",
 			"github": "https://github.com/AhmedOT22/Air-Quality-Forecasting"
 		},
 		{
@@ -64,7 +64,7 @@ def home():
 				"Implemented key financial metrics and visualized market trends."
 			),
 			"skills": "Python, Pandas, NumPy, Seaborn, Matplotlib",
-			"link": "https://example.com/stock-demo",
+			#"link": "https://example.com/stock-demo",
 			"github": "https://github.com/AhmedOT22/Stock-Watcher-Notebook"
 		}
 	]
