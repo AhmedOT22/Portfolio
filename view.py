@@ -55,7 +55,7 @@ def home():
 			),
 			"skills": "Alteryx, Python, Pandas, Power BI, ETS",
 			"link": "https://example.com/air-quality-demo",
-			"github": "https://github.com/yourusername/air-quality-forecasting"
+			"github": "https://github.com/AhmedOT22/Air-Quality-Forecasting"
 		},
 		{
 			"title": "Stock Watcher",
@@ -65,7 +65,7 @@ def home():
 			),
 			"skills": "Python, Pandas, NumPy, Seaborn, Matplotlib",
 			"link": "https://example.com/stock-demo",
-			"github": "https://github.com/yourusername/stock-watcher"
+			"github": "https://github.com/AhmedOT22/Stock-Watcher-Notebook"
 		}
 	]
 
