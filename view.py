@@ -25,8 +25,8 @@ def home():
 				"Includes data preprocessing, EDA visualizations, and a Streamlit-based UI for interactive predictions."
 			),
 			"skills": "Python, Scikit-learn, Pandas, Streamlit, Matplotlib",
-			"link": "https://example.com/real-estate",
-			"github": "https://github.com/AhmedOT22/real-estate-price-predictor"
+			"link": "https://real-estate-price-estimation-utm6wfs9dykdimegfmmwrw.streamlit.app/",
+			"github": "https://github.com/AhmedOT22/Real-Estate-Price-Estimation"
 		},
 		{
 			"title": "Mall Customer Segmentation",
@@ -36,8 +36,8 @@ def home():
 				"Optimal cluster count determined using the Elbow Method and Silhouette Score. Includes a simple interactive dashboard in Streamlit."
 			),
 			"skills": "Python, Scikit-learn, Matplotlib, Streamlit",
-			"link": "https://example.com/mall-segmentation",
-			"github": "https://github.com/AhmedOT22/mall-customer-segmentation"
+			"link": "https://mall-customers-segmentation-a5kdbi8xu3bps7vxaf5am2.streamlit.app/",
+			"github": "https://github.com/AhmedOT22/Mall-Customers-Segmentation"
 		},
 		{
 			"title": "UCLA Admission Prediction",
@@ -46,9 +46,9 @@ def home():
 				"A deep learning project that predicts graduate admission chances at UCLA based on GPA, GRE, TOEFL, SOP, and LOR scores. "
 				"The project includes explainability using SHAP values, an interactive input form, and visual feedback via Streamlit."
 			),
-			"skills": "Python, TensorFlow, Keras, SHAP, Streamlit",
-			"link": "https://example.com/ucla-admissions",
-			"github": "https://github.com/AhmedOT22/ucla-admission-predictor"
+			"skills": "Python, Scikit-learn, Streamlit",
+			"link": "https://ucla-admission-prediction-yuozl4rzy3dryn2gkuspwc.streamlit.app/",
+			"github": "https://github.com/AhmedOT22/UCLA-Admission-Prediction"
 		},
 		{
 			"title": "Air Quality Forecasting",
