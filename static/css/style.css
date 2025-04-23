@@ -146,9 +146,8 @@ header {
 	background: linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,193,180,0.15));
 	box-shadow: 0 8px 32px rgba(0,0,0,0.2);
 	border: 1px solid rgba(255,255,255,0.2);
-	margin: 5rem auto 0;
-	height: 500px;
-	max-width: 1400px;
+	margin: 4rem auto 0;
+	max-width: 1800px;
 }
 #home h1 {
 	font-size: 3rem;
@@ -228,12 +227,17 @@ header {
 	transform: translateY(-8px);
 }
 .project-image-placeholder {
-	width: 100%;
-	height: 180px;
+	height: 450px;
 	background-color: #d3d3d3;
 	border-radius: 8px;
 	margin-bottom: 1rem;
 }
+
+.project-image-placeholder img {
+	border-radius: 8px;
+	object-fit: contain;
+}
+
 .project-description {
 	flex: 1;
 	display: flex;
@@ -289,7 +293,7 @@ header {
 	flex-direction: column;
 	align-items: center;
 	gap: 1rem;
-	max-width: 1600px;
+	max-width: 500px;
 	margin: 2rem auto 0;
 }
 #contact input,

@@ -8,6 +8,7 @@ def home():
 	projects = [
 		{
 			"title": "Loan Eligibility Prediction",
+			"image": "images/loan.png",
 			"description": (
 				"A real-time machine learning web app that predicts loan approval likelihood based on user inputs. "
 				"Implements Random Forest and Logistic Regression models, featuring an interactive form and dynamic gauge visualization built with Streamlit."
@@ -18,33 +19,36 @@ def home():
 		},
 		{
 			"title": "Real Estate Price Prediction",
+			"image": "images/realestate.png",
 			"description": (
 				"A regression-based machine learning app for predicting house prices based on property attributes. "
 				"Includes data preprocessing, EDA visualizations, and a Streamlit-based UI for interactive predictions."
 			),
 			"skills": "Python, Scikit-learn, Pandas, Streamlit, Matplotlib",
-			#"link": "https://example.com/real-estate",
-			#"github": "https://github.com/AhmedOT22/real-estate-price-predictor"
+			"link": "https://example.com/real-estate",
+			"github": "https://github.com/AhmedOT22/real-estate-price-predictor"
 		},
 		{
 			"title": "Mall Customer Segmentation",
+			"image": "images/mall.png",
 			"description": (
 				"A clustering project that segments mall customers by income and spending score using the K-Means algorithm. "
 				"Optimal cluster count determined using the Elbow Method and Silhouette Score. Includes a simple interactive dashboard in Streamlit."
 			),
 			"skills": "Python, Scikit-learn, Matplotlib, Streamlit",
-			#"link": "https://example.com/mall-segmentation",
-			#"github": "https://github.com/AhmedOT22/mall-customer-segmentation"
+			"link": "https://example.com/mall-segmentation",
+			"github": "https://github.com/AhmedOT22/mall-customer-segmentation"
 		},
 		{
 			"title": "UCLA Admission Prediction",
+			"image": "images/ucla.png",
 			"description": (
 				"A deep learning project that predicts graduate admission chances at UCLA based on GPA, GRE, TOEFL, SOP, and LOR scores. "
 				"The project includes explainability using SHAP values, an interactive input form, and visual feedback via Streamlit."
 			),
 			"skills": "Python, TensorFlow, Keras, SHAP, Streamlit",
-			#"link": "https://example.com/ucla-admissions",
-			#"github": "https://github.com/AhmedOT22/ucla-admission-predictor"
+			"link": "https://example.com/ucla-admissions",
+			"github": "https://github.com/AhmedOT22/ucla-admission-predictor"
 		},
 		{
 			"title": "Air Quality Forecasting",

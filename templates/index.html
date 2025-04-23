@@ -13,7 +13,7 @@
 	<div class="about-text">
 		<p>
 			Hi there! My name is Ahmed Ouazzani, a 24-year-old Moroccan currently living in the vibrant city of Ottawa, Ontario, Canada.
-			I’m a dedicated Business Intelligence student with a passion for web development and data-driven solutions.
+			I am a dedicated Business Intelligence student with a passion for web development and data-driven solutions.
 			With a strong foundation in Python, SQL, and machine learning, I build impactful applications and intuitive dashboards.
 		</p>
 	</div>
@@ -25,7 +25,7 @@
 		{% for project in projects %}
 		<div class="project-card">
 			{% if project.image %}
-			<img src="{{ url_for('static', filename='images/' ~ project.image) }}" alt="{{ project.title }}" class="project-image-placeholder">
+			<img src="{{ url_for('static', filename= project.image) }}" alt="{{ project.title }}" class="project-image-placeholder">
 			{% else %}
 			<div class="project-image-placeholder"></div>
 			{% endif %}
