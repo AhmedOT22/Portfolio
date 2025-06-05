@@ -10,8 +10,8 @@ def home():
 			"title": "Loan Eligibility Prediction",
 			"image": "images/loan.png",
 			"description": (
-				"A real-time ML web app that predicts loan approval likelihood using Random Forest and Logistic Regression. 
-                                 Features interactive user input, dynamic model switching, and a visual gauge for instant, explainable feedback."
+				"A real-time ML web app that predicts loan approval likelihood using Random Forest and Logistic Regression." 
+                                 "Features interactive user input, dynamic model switching, and a visual gauge for instant, explainable feedback."
 			),
 			"skills": "Python, Scikit-learn, Streamlit, Pandas, Matplotlib",
 			"link": "https://loan-eligibility-prediction-djdstcprojdapfxugpdqwi.streamlit.app/",
@@ -21,8 +21,8 @@ def home():
 			"title": "Real Estate Price Prediction",
 			"image": "images/realestate.png",
 			"description": (
-				"Predicts house prices based on property features using regression models. Built with Streamlit and includes real-time user input,
-                                 data preprocessing, and market-adjusted pricing insights."
+				"Predicts house prices based on property features using regression models. Built with Streamlit and includes real-time user input,"
+                                 "data preprocessing, and market-adjusted pricing insights."
 			),
 			"skills": "Python, Scikit-learn, Pandas, Streamlit, Matplotlib",
 			"link": "https://real-estate-price-estimation-utm6wfs9dykdimegfmmwrw.streamlit.app/",
@@ -32,8 +32,8 @@ def home():
 			"title": "Mall Customer Segmentation",
 			"image": "images/mall.png",
 			"description": (
-				"Unsupervised ML app that clusters mall customers by income and spending behavior using K-Means. 
-                                 Optimizes segmentation using the Elbow Method and Silhouette Score, and presents results in a simple dashboard."
+				"Unsupervised ML app that clusters mall customers by income and spending behavior using K-Means." 
+                                 "Optimizes segmentation using the Elbow Method and Silhouette Score, and presents results in a simple dashboard."
 			),
 			"skills": "Python, Scikit-learn, Matplotlib, Streamlit",
 			"link": "https://mall-customers-segmentation-a5kdbi8xu3bps7vxaf5am2.streamlit.app/",
@@ -43,8 +43,8 @@ def home():
 			"title": "UCLA Admission Prediction",
 			"image": "images/ucla.png",
 			"description": (
-				"Unsupervised ML app that clusters mall customers by income and spending behavior using K-Means. 
-                                 Optimizes segmentation using the Elbow Method and Silhouette Score, and presents results in a simple dashboard."
+				"Unsupervised ML app that clusters mall customers by income and spending behavior using K-Means."
+                                 "Optimizes segmentation using the Elbow Method and Silhouette Score, and presents results in a simple dashboard."
 			),
 			"skills": "Python, Scikit-learn, Streamlit",
 			"link": "https://ucla-admission-prediction-yuozl4rzy3dryn2gkuspwc.streamlit.app/",
@@ -53,8 +53,8 @@ def home():
 		{
 			"title": "Air Quality Forecasting",
 			"description": (
-				"Forecasts AQI trends using historical pollutant and weather data across seven predictive models. 
-                                 Built an ETL pipeline and integrated time-series forecasting for environmental monitoring and planning."
+				"Forecasts AQI trends using historical pollutant and weather data across seven predictive models." 
+                                 "Built an ETL pipeline and integrated time-series forecasting for environmental monitoring and planning."
 			),
 			"skills": "Alteryx, Python, Pandas, Power BI, ETS",
 			#"link": "https://example.com/air-quality-demo",
@@ -63,8 +63,8 @@ def home():
 		{
 			"title": "Stock Watcher",
 			"description": (
-				"Fetches live market data via API and visualizes key financial metrics like SMA, EMA, ATR, and returns. 
-                                 Designed to support informed investment decisions with trend analysis and portfolio breakdowns."
+				"Fetches live market data via API and visualizes key financial metrics like SMA, EMA, ATR, and returns." 
+                                 "Designed to support informed investment decisions with trend analysis and portfolio breakdowns."
 			),
 			"skills": "Python, Pandas, NumPy, Seaborn, Matplotlib",
 			#"link": "https://example.com/stock-demo",
