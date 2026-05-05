@@ -7,6 +7,16 @@ main = Blueprint('main', __name__)
 def home():
 	projects = [
 		{
+			"title": "Air Quality Forecasting",
+			"description": (
+				"Forecasts AQI trends using historical pollutant and weather data across seven predictive models." 
+                                 "Built an ETL pipeline and integrated time-series forecasting for environmental monitoring and planning."
+			),
+			"skills": "Alteryx, Python, Pandas, Power BI, ETS",
+			"link": "https://github.com/AhmedOT22/Air-Quality-Forecasting/blob/main/AirQuality.ipynb",
+			"github": "https://github.com/AhmedOT22/Air-Quality-Forecasting"
+		},
+		{
 			"title": "Loan Eligibility Prediction",
 			"image": "images/loan.png",
 			"description": (
@@ -50,16 +60,7 @@ def home():
 			"link": "https://ucla-admission-prediction-yuozl4rzy3dryn2gkuspwc.streamlit.app/",
 			"github": "https://github.com/AhmedOT22/UCLA-Admission-Prediction"
 		},
-		{
-			"title": "Air Quality Forecasting",
-			"description": (
-				"Forecasts AQI trends using historical pollutant and weather data across seven predictive models." 
-                                 "Built an ETL pipeline and integrated time-series forecasting for environmental monitoring and planning."
-			),
-			"skills": "Alteryx, Python, Pandas, Power BI, ETS",
-			#"link": "https://example.com/air-quality-demo",
-			"github": "https://github.com/AhmedOT22/Air-Quality-Forecasting"
-		},
+		
 		{
 			"title": "Stock Watcher",
 			"description": (
@@ -67,7 +68,7 @@ def home():
                                  "Designed to support informed investment decisions with trend analysis and portfolio breakdowns."
 			),
 			"skills": "Python, Pandas, NumPy, Seaborn, Matplotlib",
-			#"link": "https://example.com/stock-demo",
+			"link": "https://github.com/AhmedOT22/Stock-Watcher-Notebook/blob/main/notebook/main.ipynb",
 			"github": "https://github.com/AhmedOT22/Stock-Watcher-Notebook"
 		}
 	]
