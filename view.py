@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template
-from flask import request, redirect, flash, url_for
+from flask import redirect, url_for
 
 main = Blueprint('main', __name__)
 
@@ -81,17 +81,5 @@ def home():
 
 @main.route('/submit', methods=['POST'])
 def submit():
-	first_name = request.form.get('first_name')
-	last_name = request.form.get('last_name')
-	email = request.form.get('email')
-	message = request.form.get('message')
-
-	# Later save to a file, send to email, etc.
-	print("New Contact Message:")
-	print(f"From: {first_name} {last_name}")
-	print(f"Email: {email}")
-	print(f"Message: {message}")
-
-	# Flash message (optional) and redirect
-	flash('Thanks for your message!', 'success')
-	return redirect(url_for('main.home'))
+	# Preserve old form links without accepting messages that cannot be delivered.
+	return redirect(url_for('main.home', _anchor='contact'), code=303)
