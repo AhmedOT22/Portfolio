@@ -206,7 +206,7 @@ header {
 }
 .project-container {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
 	gap: 2rem;
 	margin-top: 2rem;
 }
@@ -227,13 +227,15 @@ header {
 	transform: translateY(-8px);
 }
 .project-image-placeholder {
-	height: 450px;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	object-fit: contain;
 	background-color: #d3d3d3;
 	border-radius: 8px;
 	margin-bottom: 1rem;
 }
 
-.project-image-placeholder img {
+img.project-image-placeholder {
 	border-radius: 8px;
 	object-fit: contain;
 }
@@ -257,7 +259,8 @@ header {
 	display: flex;
 	gap: 0.5rem;
 }
-.project-card button {
+.project-card .project-link {
+	display: inline-block;
 	background-color: var(--secondary);
 	color: #fff;
 	border: none;
@@ -267,7 +270,7 @@ header {
 	font-weight: 600;
 	transition: background-color 0.2s ease, transform 0.2s ease;
 }
-.project-card button:hover {
+.project-card .project-link:hover {
 	background-color: var(--primary);
 	transform: scale(1.05);
 }
@@ -365,4 +368,17 @@ footer {
 }
 .footer-links i {
 	margin-right: 0.3rem;
+}
+
+.project-text-preview { display: grid; place-items: center; padding: 1rem; color: #034C53; font-weight: 600; }
+.project-card h3 { color: #fff; }
+#contact a { color: #fff; text-decoration: underline; overflow-wrap: anywhere; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+@media (max-width: 700px) {
+  section { max-width: 100%; padding: 2rem .5rem; }
+  .nav-wrapper { flex-direction: column; align-items: flex-start; gap: .75rem; }
+  .navbar { gap: .75rem; }
+  .about-image { width: min(100%, 280px); height: auto; aspect-ratio: 4 / 5; }
+  .about-text { font-size: 1.1rem; flex-basis: 100%; }
+  #home h1 { font-size: 2rem; }
 }

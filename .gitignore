@@ -1,2 +1,6 @@
 __pycache
 flask-env
+
+__pycache__/
+*.py[cod]
+.venv/
