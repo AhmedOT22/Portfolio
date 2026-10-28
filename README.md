@@ -61,8 +61,10 @@ app.py                  Flask application factory
 view.py                 Homepage route and project entries
 wsgi.py                 Gunicorn entry point
 templates/base.html     Navigation, shared layout, and footer
-templates/index.html    About, project cards, and contact section
-static/css/style.css    Website styles
+templates/index.html    Introduction, filterable projects, about, and contact
+static/css/style.css    Responsive design tokens, layouts, and accessibility styles
+static/js/main.js       Progressive project filtering
+tests/                  Homepage and WSGI integration checks
 static/images/          Profile photo and project previews
 ```
 
@@ -75,3 +77,35 @@ Contact uses email and LinkedIn links. The website does not deliver contact-form
 ## License
 
 [MIT](LICENSE)
+
+## UI and accessibility
+
+The interface uses a white and navy palette with restrained teal accents, a compact
+introduction, consistent project cards, and direct contact actions. System fonts
+and a local favicon keep the page independent of third-party font/icon CDNs.
+
+- Project filters show machine learning or data analysis work and announce the result count.
+- Without JavaScript, every project remains visible and navigation/contact links still work.
+- Keyboard users get a skip link, visible focus indicators, and native filter buttons.
+- Layouts adapt to phones and tablets; motion follows the reduced-motion preference.
+- External project links identify their destination and open safely in a new tab.
+
+Project categories live in each entry's `category` field in `view.py`; keep them
+aligned with the filter labels in `templates/index.html`. Colors and layout tokens
+are defined at the top of `static/css/style.css`.
+
+## Checks
+
+With the virtual environment activated:
+
+```bash
+python -m unittest discover -s tests -v
+python -m compileall -q app.py view.py wsgi.py tests
+python -m pip check
+node --check static/js/main.js
+```
+
+Node is optional for development and is used here only to check JavaScript syntax;
+Flask serves the site directly with no frontend build step. Integration tests cover
+homepage rendering, the production WSGI entry point, local assets, anchor targets,
+project category consistency, external-link attributes, and the legacy contact redirect.
