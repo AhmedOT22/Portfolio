@@ -513,7 +513,8 @@ h1 > span {
   text-decoration: underline;
   color: var(--accent);
 }
-.notebook-preview {
+ .notebook-preview {
+  background: var(--ink);
   display: flex;
   flex-direction: column;
   justify-content: center;
