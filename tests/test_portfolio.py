@@ -53,10 +53,15 @@ class PortfolioTests(TestCase):
         filters = {attrs['data-filter'] for _, attrs in self.page.elements
                    if 'data-filter' in attrs}
         cards = [attrs for tag, attrs in self.page.elements if tag == 'article']
-        self.assertEqual(len(cards), 6)
+        self.assertEqual(len(cards), 9)
+        self.assertEqual(
+            {item['data-category'] for item in cards},
+            {"Business intelligence", "Data engineering", "Machine learning & AI"},
+        )
         for card in cards:
             self.assertIn(card['data-category'], filters)
             self.assertNotIn('hidden', card, 'Projects must render without JS')
+        self.assertIn("Procurement Contract Analysis", self.client.get('/').get_data(as_text=True))
         toolbars = [attrs for _, attrs in self.page.elements
                     if attrs.get('class') == 'project-toolbar']
         self.assertIn('hidden', toolbars[0])
