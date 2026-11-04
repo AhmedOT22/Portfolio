@@ -9,9 +9,9 @@
       Making data<br />clear.<br /><span>Making it useful.</span>
     </h1>
     <p class="hero-intro">
-      I'm Ahmed, a data and business intelligence professional. I turn complex
-      data into dashboards, practical insights, and applied machine learning
-      solutions.
+      I'm Ahmed, a software engineering graduate working across data analytics,
+      data engineering, business intelligence, and applied machine learning.
+      I build reliable pipelines, decision-ready dashboards, and tested models.
     </p>
     <div class="hero-actions">
       <a class="button button-primary" href="#projects"
@@ -21,8 +21,7 @@
       >
     </div>
     <div class="hero-tools" aria-label="Core tools">
-      <span>SQL</span><span>Python</span><span>Power BI</span
-      ><span>scikit-learn</span>
+      <span>Python</span><span>SQL</span><span>Power BI</span><span>PostgreSQL</span><span>scikit-learn</span>
     </div>
   </div>
   <figure class="portrait">
@@ -34,7 +33,7 @@
       fetchpriority="high"
     />
     <figcaption>
-      <span>Ahmed Ouazzani</span><span>Data analytics &amp; applied ML</span>
+      <span>Ahmed Ouazzani</span><span>Data analytics · engineering · ML</span>
     </figcaption>
   </figure>
 </section>
@@ -50,13 +49,13 @@
         <h2 id="projects-title">From exploration to application.</h2>
       </div>
       <p>
-        Explore the analysis, the code, and the tools built around the data.
+        Selected projects span business intelligence, data pipelines, forecasting,
+        and evidence-grounded AI prototyping.
       </p>
     </div>
     <div class="project-toolbar" hidden>
       <div class="filters" role="group" aria-label="Filter projects">
-        {% for filter in ['All projects', 'Machine learning', 'Data analysis']
-        %}<button
+        {% for filter in project_filters %}<button
           type="button"
           class="filter-button"
           data-filter="{{ filter }}"
@@ -85,7 +84,7 @@
           {% if project.image %}
           <img
             src="{{ url_for('static', filename=project.image) }}"
-            alt="{{ project.title }} application preview"
+            alt="{{ project.title }} project preview"
             loading="lazy"
             width="640"
             height="360"
@@ -96,21 +95,18 @@
             aria-label="Time series project workflow"
           >
             <span class="preview-kicker">PROJECT / 01</span>
-            <p>Air quality.<br />A clearer outlook.</p>
+            <p>Data quality.<br />Better decisions.</p>
             <div class="pipeline">
-              <span>Pollutant data</span><span aria-hidden="true">→</span
+              <span>Validated data</span><span aria-hidden="true">→</span
               ><span>Forecasting</span>
             </div>
-            <span class="preview-footnote">TORONTO · TIME SERIES ANALYSIS</span>
+            <span class="preview-footnote">TORONTO · PREDICTIVE ANALYTICS</span>
           </div>
           {% else %}
           <div class="notebook-preview">
-            <span class="preview-kicker">PYTHON / NOTEBOOK</span
-            ><span class="code-line">import <b>pandas</b> as pd</span
-            ><span class="code-line">market_data.<b>head</b>()</span
-            ><span class="notebook-label"
-              >Market data → indicators → insights</span
-            >
+            <span class="preview-kicker">PROJECT / {{ "%02d"|format(loop.index) }}</span>
+            <p class="preview-title">{{ project.title }}</p>
+            <span class="notebook-label">{{ project.preview or "Analysis · modelling · evaluation" }}</span>
           </div>
           {% endif %}
         </div>
@@ -121,6 +117,7 @@
           </p>
           <h3 id="project-{{ loop.index }}">{{ project.title }}</h3>
           <p class="project-summary">{{ project.description }}</p>
+          {% if project.status %}<p class="project-status">{{ project.status }}</p>{% endif %}
           <ul class="skill-tags" aria-label="Technologies">
             {% for skill in project.skills.split(', ') %}
             <li>{{ skill }}</li>
@@ -149,8 +146,9 @@
       {% endfor %}
     </div>
     <p class="project-note">
-      Prediction apps are educational demonstrations. See each repository for
-      dataset scope, evaluation, and limitations.
+      These projects have different maturity levels. Retrospective model metrics are not
+      production accuracy claims. Synthetic data and private prototypes are labelled,
+      and source repositories document remaining validation.
     </p>
   </div>
 </section>
@@ -175,26 +173,26 @@
   </div>
   <div class="about-details">
     <p class="about-intro">
-      I focus on making operational data easier to understand and use.
+      I build trustworthy data workflows and practical analytical applications.
     </p>
     <p>
-      Based in Ottawa, I work with SQL, Python, and Power BI to build data
-      models, pipelines, dashboards, and predictive analytics solutions. My
-      projects connect data preparation and evaluation with interfaces people
-      can actually explore.
+      Based in Ottawa, I combine software engineering and postgraduate training in
+      business intelligence and project management. My work spans Python and SQL
+      pipelines, Power BI reporting, time-series forecasting, and local AI-assisted
+      document review. I value reproducibility, honest evaluation and usable tools.
     </p>
     <dl class="capabilities">
       <div>
-        <dt>Business intelligence</dt>
-        <dd>SQL data models &amp; Power BI dashboards</dd>
+        <dt>Business intelligence &amp; analytics</dt>
+        <dd>SQL models, Power BI, DAX and stakeholder reporting</dd>
       </div>
       <div>
-        <dt>Data analysis</dt>
-        <dd>Data preparation, exploration &amp; visualization</dd>
+        <dt>Data engineering</dt>
+        <dd>ETL, data quality, PostgreSQL and automated pipelines</dd>
       </div>
       <div>
-        <dt>Applied machine learning</dt>
-        <dd>Model comparison, evaluation &amp; interactive apps</dd>
+        <dt>Machine learning &amp; applied AI</dt>
+        <dd>Forecast validation, model monitoring and evidence-grounded LLM prototypes</dd>
       </div>
     </dl>
   </div>
@@ -210,8 +208,8 @@
       Have a data challenge<br />or an opportunity in mind?
     </h2>
     <p>
-      Get in touch about business intelligence, data analytics, or applied
-      machine learning.
+      Get in touch about data analytics, BI development, data engineering,
+      forecasting or applied AI opportunities.
     </p>
   </div>
   <div class="contact-actions">
