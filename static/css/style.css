@@ -398,7 +398,7 @@ h1 > span {
   background: #e6efee;
 }
 .visual-1,
-.visual-6 {
+.visual-3 {
   padding: 0;
   background: var(--ink);
   color: #fff;
@@ -530,6 +530,18 @@ h1 > span {
 .code-line b {
   font-weight: 400;
   color: #88d4bf;
+}
+.preview-title {
+  font-size: 1.55rem;
+  line-height: 1.2;
+  color: #e1eeee;
+  font-weight: 650;
+}
+.project-status {
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: var(--accent-dark);
+  margin-top: 12px;
 }
 .notebook-label {
   font-size: 0.65rem;
@@ -693,7 +705,7 @@ h1 > span {
     height: 210px;
   }
   .visual-1,
-  .visual-6 {
+  .visual-3 {
     padding: 0;
   }
 }
