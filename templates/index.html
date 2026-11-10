@@ -34,30 +34,28 @@
 <section class="work-section section-spacing" id="work" aria-labelledby="work-heading">
   <div class="container">
     <div class="section-heading">
-      <div><span class="section-kicker">01 / SELECTED WORK</span><h2 id="work-heading">Projects with <em>substance.</em></h2></div>
-      <p>A selection of analytical and engineering work, with clear scope and realistic technical claims.</p>
+      <div><span class="section-kicker">01 / SELECTED WORK</span><h2 id="work-heading">Engineering behind <em>the insight.</em></h2></div>
+      <p>Real workflows, measurable results and transparent limitations—not just technology lists.</p>
     </div>
     <div class="featured-grid">
       {% for project in featured %}
       <article class="feature-card feature-{{ project.slug }}">
         <div class="feature-art art-{{ project.slug }}" aria-hidden="true">
           <div class="art-top"><span>CASE STUDY / {{ project.number }}</span><span class="art-symbol">↗</span></div>
-          {% if project.slug == 'hospital' %}
-          <div class="art-chart"><div class="art-chart-row"><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="art-chart-bottom"><i></i><i></i><i></i><i></i></div></div>
-          <div class="art-bottom">SQL <span>→</span> MODEL <span>→</span> BI</div>
-          {% elif project.slug == 'procurement' %}
-          <div class="art-document"><div class="doc-heading"></div><div class="doc-line w80"></div><div class="doc-line"></div><div class="doc-line w65"></div><div class="doc-highlight"></div><div class="doc-line w80"></div></div>
-          <div class="art-bottom">EVIDENCE <span>→</span> REVIEW <span>→</span> DATA</div>
+          {% if project.image %}
+          <div class="project-real-preview"><img src="{{ project.image }}" alt="{{ project.image_alt }}" width="800" height="500" loading="lazy"></div>
           {% else %}
-          <div class="art-wave"><svg viewBox="0 0 480 164" preserveAspectRatio="none" focusable="false"><path d="M0 108 C28 95 42 130 70 88 S132 40 165 78 S234 154 267 99 S338 12 373 63 S432 129 480 45" /><path class="wave-secondary" d="M0 125 C40 137 55 76 92 99 S155 148 196 110 S267 68 304 118 S392 70 480 95" /></svg></div>
-          <div class="art-bottom">DATA <span>→</span> FORECAST <span>→</span> VALIDATE</div>
+          <div class="art-document"><div class="doc-heading"></div><div class="doc-line w80"></div><div class="doc-line"></div><div class="doc-line w65"></div><div class="doc-highlight"></div><div class="doc-line w80"></div></div>
           {% endif %}
+          <div class="art-bottom">{% if project.slug == 'air' %}DATA <span>→</span> FORECAST <span>→</span> VALIDATE{% elif project.slug == 'hospital' %}SQL <span>→</span> MODEL <span>→</span> BI{% else %}EVIDENCE <span>→</span> REVIEW <span>→</span> DATA{% endif %}</div>
         </div>
         <div class="feature-content">
           <div class="feature-meta"><span>{{ project.category }}</span><span>{{ project.number }}</span></div>
           <h3>{{ project.title }}</h3>
+          <div class="feature-proof"><strong>{{ project.metric }}</strong><span>{{ project.metric_note }}</span></div>
           <p>{{ project.description }}</p>
           <p class="feature-detail">{{ project.detail }}</p>
+          <details class="project-evidence"><summary>Approach, evidence &amp; limitations</summary><ul>{% for point in project.evidence %}<li>{{ point }}</li>{% endfor %}</ul></details>
           <ul class="skill-pills" aria-label="Skills used">{% for skill in project.skills %}<li>{{ skill }}</li>{% endfor %}</ul>
           <div class="feature-footer">
             <span class="project-status">{{ project.status }}</span>
@@ -67,7 +65,7 @@
       </article>
       {% endfor %}
     </div>
-    <div class="more-heading"><div><span class="section-kicker">ADDITIONAL WORK</span><h3>Applied models & interactive tools</h3></div><a href="https://github.com/AhmedOT22" target="_blank" rel="noopener noreferrer">All repositories <span aria-hidden="true">↗</span></a></div>
+    <div class="more-heading"><div><span class="section-kicker">ADDITIONAL WORK</span><h3>Other interactive applications</h3></div><a href="https://github.com/AhmedOT22" target="_blank" rel="noopener noreferrer">All repositories <span aria-hidden="true">↗</span></a></div>
     <div class="other-grid">
       {% for project in additional %}
       <article class="other-card">
@@ -84,7 +82,7 @@
 
 <section class="capabilities-section section-spacing" id="about" aria-labelledby="about-heading">
   <div class="container">
-    <div class="section-heading"><div><span class="section-kicker">02 / CAPABILITIES</span><h2 id="about-heading">A practical <em>technical foundation.</em></h2></div><p>Software engineering depth, focused on making data usable and trustworthy.</p></div>
+    <div class="section-heading"><div><span class="section-kicker">02 / CAPABILITIES</span><h2 id="about-heading">Analytics with <em>engineering depth.</em></h2></div><p>Software engineering depth, focused on making data usable and trustworthy.</p></div>
     <div class="capability-grid">
       <div class="capability-card"><span class="capability-number">01</span><h3>Analytics & BI</h3><p>SQL · Power BI · DAX · Power Query · Excel · KPIs · Dashboards</p></div>
       <div class="capability-card"><span class="capability-number">02</span><h3>Data Engineering</h3><p>Python · Pandas · ETL/ELT · Data Quality · SQL Server · PostgreSQL</p></div>
