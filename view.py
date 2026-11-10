@@ -7,149 +7,78 @@ main = Blueprint("main", __name__)
 
 @main.route("/")
 def home():
-    # Keep these descriptions synchronized with each project's documented status.
-    projects = [
+    """Curated public work; limitations are stated explicitly."""
+    featured = [
         {
+            "slug": "hospital",
             "title": "Hospital Insights Dashboard",
             "category": "Business intelligence",
-            "description": (
-                "SQL Server and Power BI reporting project with eleven linked tables, "
-                "five report pages and reproducible synthetic data. Automated SQL, "
-                "data-quality and metric reconciliation checks support the design."
-            ),
-            "skills": "SQL Server, Power BI, DAX, Data Modeling, Python",
-            "link": "https://github.com/AhmedOT22/Hospital-Insights-Dashboard",
-            "link_label": "View project",
+            "number": "01",
+            "description": "Healthcare reporting built around a relational SQL Server model, data-quality checks, and Power BI report design.",
+            "detail": "Eleven linked tables and reproducible synthetic data. Desktop visual and DAX acceptance checks remain pending.",
+            "skills": ["SQL Server", "Power BI", "DAX", "Data Modeling"],
             "github": "https://github.com/AhmedOT22/Hospital-Insights-Dashboard",
-            "preview": "SQL Server → semantic model → Power BI",
-            "status": "Synthetic data; Power BI Desktop acceptance pending",
+            "status": "Synthetic data · In development",
         },
         {
-            "title": "Amazon Sales Analysis",
-            "category": "Business intelligence",
-            "description": (
-                "Power BI sales reporting supported by exploratory Python notebooks "
-                "for data preparation, regression and classification."
-            ),
-            "skills": "Power BI, Python, Pandas, Sales Analytics",
-            "link": "https://github.com/AhmedOT22/Amazon-Sales-Analysis",
-            "link_label": "View project",
-            "github": "https://github.com/AhmedOT22/Amazon-Sales-Analysis",
-            "preview": "Sales data → analysis → reporting",
-            "status": "Exploratory portfolio analysis",
+            "slug": "procurement",
+            "title": "Procurement Contract Analysis",
+            "category": "Data engineering · Applied AI",
+            "number": "02",
+            "description": "An evidence-first contract review prototype combining cited PDF findings, human review, and structured data acquisition.",
+            "detail": "React/FastAPI interface with a separate PostgreSQL research warehouse. Semantic extraction and pricing have not been validated for release.",
+            "skills": ["Python", "PostgreSQL", "ETL", "FastAPI", "React"],
+            "github": None,
+            "status": "Private prototype · Validation ongoing",
         },
         {
+            "slug": "air",
             "title": "Toronto Air Quality Forecasting",
-            "category": "Machine learning & AI",
-            "description": (
-                "Reconstructed station-specific AQI and evaluated one-to-seven-day forecasts "
-                "using chronological splits and persistence baselines. The selected Ridge model "
-                "reduced 2025 MAE by 27.0% (day 1) and 25.7% (day 7) against persistence. "
-                "Includes validated ETL, scheduled updates and monitoring."
-            ),
-            "skills": "Python, scikit-learn, ETL, Time Series, GitHub Actions",
-            "link": "https://github.com/AhmedOT22/Air-Quality-Forecasting",
-            "link_label": "View project",
+            "category": "Data science · Forecasting",
+            "number": "03",
+            "description": "An end-to-end data pipeline for reconstructed station-level AQI, with chronological forecasting evaluation and monitoring.",
+            "detail": "On a retrospective 2025 evaluation, day-ahead MAE improved 27% against a persistence baseline; not a live accuracy guarantee.",
+            "skills": ["Python", "ETL", "scikit-learn", "Time Series"],
             "github": "https://github.com/AhmedOT22/Air-Quality-Forecasting",
-            "preview": "Validated data → Ridge forecasts → monitoring",
-            "status": "Retrospective model results; public dashboard hosting pending",
+            "status": "Retrospective model evaluation",
+        },
+    ]
+
+    additional = [
+        {
+            "title": "Loan Eligibility Prediction",
+            "category": "Classification · Streamlit",
+            "description": "A reproducible classification workflow with preprocessing, baseline comparison, and interactive inference.",
+            "image": "images/loan.png",
+            "github": "https://github.com/AhmedOT22/Loan-Eligibility-Prediction",
+            "demo": "https://loan-eligibility-prediction-djdstcprojdapfxugpdqwi.streamlit.app/",
         },
         {
             "title": "Real Estate Price Estimation",
-            "category": "Machine learning & AI",
+            "category": "Regression · Streamlit",
+            "description": "Property-price modeling with multiple regression approaches and a deployed demonstration.",
             "image": "images/realestate.png",
-            "description": (
-                "Historical property-price modelling comparing Random Forest, Decision "
-                "Tree and linear regression against a median baseline. The latest "
-                "evaluation and older serving artifacts are documented separately."
-            ),
-            "skills": "Python, Regression, scikit-learn, Streamlit",
-            "link": "https://real-estate-price-estimation-utm6wfs9dykdimegfmmwrw.streamlit.app/",
-            "link_label": "View demo",
             "github": "https://github.com/AhmedOT22/Real-Estate-Price-Estimation",
-            "status": "Historical demonstration; not a current property valuation",
-        },
-        {
-            "title": "Loan Eligibility Prediction",
-            "category": "Machine learning & AI",
-            "image": "images/loan.png",
-            "description": (
-                "Educational classification with Logistic Regression and Random Forest, "
-                "train-only preprocessing, repeated cross-validation, a majority-class "
-                "baseline and versioned inference artifacts."
-            ),
-            "skills": "Python, scikit-learn, Classification, Streamlit",
-            "link": "https://loan-eligibility-prediction-djdstcprojdapfxugpdqwi.streamlit.app/",
-            "link_label": "View demo",
-            "github": "https://github.com/AhmedOT22/Loan-Eligibility-Prediction",
-            "status": "Educational demo; not a lending decision system",
-        },
-        {
-            "title": "Procurement Contract Analysis",
-            "category": "Data engineering",
-            "description": (
-                "Local React/FastAPI prototype for text-PDF review with exact evidence "
-                "citations, manual corrections and exportable reports. Separate source "
-                "acquisition, Parquet ETL and PostgreSQL research-coverage warehouse; "
-                "optional local LLM findings require human verification."
-            ),
-            "skills": "Python, PostgreSQL, Parquet, FastAPI, React, LLM Evaluation",
-            "preview": "Document evidence → review → research warehouse",
-            "status": "Private prototype; AI extraction and pricing are not validated for release",
+            "demo": "https://real-estate-price-estimation-utm6wfs9dykdimegfmmwrw.streamlit.app/",
         },
         {
             "title": "Mall Customer Segmentation",
-            "category": "Machine learning & AI",
+            "category": "Clustering · Streamlit",
+            "description": "K-means segmentation with exploratory diagnostics and illustrative customer personas.",
             "image": "images/mall.png",
-            "description": (
-                "Educational K-means customer clustering with exploratory diagnostics "
-                "and illustrative, not empirically validated, persona labels."
-            ),
-            "skills": "Python, K-Means, scikit-learn, Streamlit",
-            "link": "https://mall-customers-segmentation-a5kdbi8xu3bps7vxaf5am2.streamlit.app/",
-            "link_label": "View demo",
             "github": "https://github.com/AhmedOT22/Mall-Customers-Segmentation",
-            "status": "Educational clustering example",
-        },
-        {
-            "title": "Graduate Admission Classification",
-            "category": "Machine learning & AI",
-            "image": "images/ucla.png",
-            "description": (
-                "MLP-based classification of a dataset-derived admission-chance threshold. "
-                "The target is not an observed university admission decision."
-            ),
-            "skills": "Python, MLP, scikit-learn, Streamlit",
-            "link": "https://ucla-admission-prediction-yuozl4rzy3dryn2gkuspwc.streamlit.app/",
-            "link_label": "View demo",
-            "github": "https://github.com/AhmedOT22/UCLA-Admission-Prediction",
-            "status": "Educational threshold classification",
-        },
-        {
-            "title": "Stock Watcher",
-            "category": "Data engineering",
-            "description": (
-                "Python notebook and utilities for retrieving historical market prices, "
-                "calculating indicators and maintaining a local watchlist."
-            ),
-            "skills": "Python, Pandas, APIs, Time Series",
-            "link": "https://github.com/AhmedOT22/Stock-Watcher-Notebook",
-            "link_label": "View project",
-            "github": "https://github.com/AhmedOT22/Stock-Watcher-Notebook",
-            "preview": "Market API → indicators → local watchlist",
-            "status": "Research utility; no trading execution",
+            "demo": "https://mall-customers-segmentation-a5kdbi8xu3bps7vxaf5am2.streamlit.app/",
         },
     ]
-    filters = ["All projects", "Business intelligence", "Data engineering", "Machine learning & AI"]
     return render_template(
         "index.html",
-        projects=projects,
-        project_filters=filters,
+        featured=featured,
+        additional=additional,
         current_year=datetime.now().year,
     )
 
 
 @main.route("/submit", methods=["POST"])
 def submit():
-    # Preserve old form links without accepting messages that cannot be delivered.
+    """Legacy form endpoint: no messages are stored or sent."""
     return redirect(url_for("main.home", _anchor="contact"), code=303)
