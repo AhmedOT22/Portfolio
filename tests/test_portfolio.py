@@ -59,9 +59,11 @@ class PortfolioTests(TestCase):
         ):
             self.assertIn(project, self.html)
         self.assertNotIn("Amazon Sales Analysis", self.html)
+        self.assertLess(self.html.index("Toronto Air Quality Forecasting"), self.html.index("Hospital Insights Dashboard"))
         self.assertLess(self.html.index("Hospital Insights Dashboard"), self.html.index("Procurement Contract Analysis"))
-        self.assertLess(self.html.index("Procurement Contract Analysis"), self.html.index("Toronto Air Quality Forecasting"))
         self.assertIn("Private prototype", self.html)
+        self.assertIn("27% lower MAE", self.html)
+        self.assertIn("Approach, evidence", self.html)
         self.assertIn("Synthetic data", self.html)
 
     def test_external_links_secure(self):
