@@ -1,0 +1,32 @@
+name: Portfolio checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install requirements
+        run: python -m pip install -r requirements.txt
+      - name: Run integration tests
+        run: python -m unittest discover -s tests -v
+      - name: Compile source
+        run: python -m compileall -q app.py view.py wsgi.py export_static.py tests
+      - name: Export CDN website
+        run: python export_static.py
+      - name: Verify static site assets
+        run: |
+          test -s dist/index.html
+          test -s dist/static/css/style.css
+          test -s dist/static/images/ahmed-portrait.webp
+          grep -q "Procurement Contract Analysis" dist/index.html
+          ! grep -q "Amazon Sales Analysis" dist/index.html
