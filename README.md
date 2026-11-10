@@ -4,15 +4,19 @@ Professional portfolio showcasing analytics, business intelligence, data enginee
 
 **[Live portfolio](https://portfolio-9o9p.onrender.com/)** · **[GitHub](https://github.com/AhmedOT22)** · **[LinkedIn](https://www.linkedin.com/in/ahmed-ouazzani-5b078b205/)**
 
+## Portfolio positioning
+
+Focused on **Data Analyst / BI Developer** opportunities while demonstrating broader data engineering, forecasting, and applied AI skills. The homepage uses the supplied professional portrait and shows project evidence, measured results, scope, and limitations.
+
 ## Featured work
 
-| Project | Evidence & scope |
+| Project | Why it's featured |
 | --- | --- |
-| **Hospital Insights Dashboard** | SQL Server and Power BI reporting, eleven linked tables, validation, and synthetic test data. Desktop DAX/visual acceptance pending. |
-| **Procurement Contract Analysis** | Private evidence-first PDF review prototype; React, FastAPI, PostgreSQL research data and acquisition ETL. Automated semantic extraction and pricing not validated for release. |
-| **Toronto Air Quality Forecasting** | Validated Python ETL and chronological forecasts. On the retrospective 2025 evaluation, day-one MAE improved 27% against a persistence baseline (not a live guarantee). |
+| **Toronto Air Quality Forecasting** | Strongest publicly reproducible technical case study: validated data sources, leak-free evaluation, automated forecasting, and **27% lower 2025 holdout day-one MAE** than persistence. |
+| **Hospital Insights Dashboard** | Direct BI relevance: SQL Server, synthetic healthcare reporting, dimensional modeling, DAX and five report pages. Desktop acceptance remains pending. |
+| **Procurement Contract Analysis** | Private local full-stack and data engineering prototype with cited evidence review, CAD cost calculator, and a documented clause-detection benchmark on 84 contracts; production validation remains incomplete. |
 
-Additional selected work: Loan Eligibility Prediction, Real Estate Price Estimation and Mall Customer Segmentation. Amazon Sales Analysis remains available in its independent repository but is intentionally not featured here.
+Two supplementary Streamlit projects—Real Estate Price Estimation and Loan Eligibility Prediction—offer accessible demonstrations of model-driven interfaces. The Amazon project is intentionally not displayed on the portfolio.
 
 ## Run locally
 
