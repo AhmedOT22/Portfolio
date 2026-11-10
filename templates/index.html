@@ -1,40 +1,24 @@
 {% extends "base.html" %} {% block content %}
 <section id="home" class="hero container" aria-labelledby="hero-title">
   <div class="hero-copy">
-    <p class="eyebrow">
-      <span class="location-dot" aria-hidden="true"></span> Ottawa, Canada ·
-      English &amp; French
-    </p>
-    <h1 id="hero-title">
-      Making data<br />clear.<br /><span>Making it useful.</span>
-    </h1>
+    <p class="eyebrow"><span class="location-dot" aria-hidden="true"></span> Ottawa, Canada · English / French / Arabic</p>
+    <p class="hero-label">DATA ANALYST / BI DEVELOPER</p>
+    <h1 id="hero-title">Turning data into<br /><span>better decisions.</span></h1>
     <p class="hero-intro">
-      I'm Ahmed, a software engineering graduate working across data analytics,
-      data engineering, business intelligence, and applied machine learning.
-      I build reliable pipelines, decision-ready dashboards, and tested models.
+      I'm Ahmed, a software engineering graduate specializing in analytics and business intelligence.
+      I use SQL, Python and Power BI to turn complex data into reliable reporting, actionable insights and useful tools.
     </p>
     <div class="hero-actions">
-      <a class="button button-primary" href="#projects"
-        >Explore my work <span aria-hidden="true">↓</span></a
-      ><a class="text-link" href="#contact"
-        >Let's connect <span aria-hidden="true">↗</span></a
-      >
+      <a class="button button-primary" href="#projects">Explore projects <span aria-hidden="true">↗</span></a>
+      <a class="text-link" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
     </div>
     <div class="hero-tools" aria-label="Core tools">
-      <span>Python</span><span>SQL</span><span>Power BI</span><span>PostgreSQL</span><span>scikit-learn</span>
+      <span>SQL</span><span>Power BI</span><span>Python</span><span>DAX</span><span>Data modeling</span><span>ETL</span>
     </div>
   </div>
   <figure class="portrait">
-    <img
-      src="{{ url_for('static', filename='images/prettyboi.jpg') }}"
-      alt="Ahmed Ouazzani"
-      width="1116"
-      height="1536"
-      fetchpriority="high"
-    />
-    <figcaption>
-      <span>Ahmed Ouazzani</span><span>Data analytics · engineering · ML</span>
-    </figcaption>
+    <img src="{{ url_for('static', filename='images/prettyboi.jpg') }}" alt="Portrait of Ahmed Ouazzani" width="1116" height="1536" fetchpriority="high" />
+    <figcaption><span>Ahmed Ouazzani</span><span>Analytics · BI · Data Engineering</span></figcaption>
   </figure>
 </section>
 <section
@@ -45,12 +29,11 @@
   <div class="container">
     <div class="section-heading">
       <div>
-        <p class="eyebrow">Selected work</p>
-        <h2 id="projects-title">From exploration to application.</h2>
+        <p class="eyebrow">Case studies & selected work</p>
+        <h2 id="projects-title">Analytics that makes an impact.</h2>
       </div>
       <p>
-        Selected projects span business intelligence, data pipelines, forecasting,
-        and evidence-grounded AI prototyping.
+        Business reporting first, supported by deeper work in data engineering, forecasting and applied machine learning.
       </p>
     </div>
     <div class="project-toolbar" hidden>
@@ -95,12 +78,12 @@
             aria-label="Time series project workflow"
           >
             <span class="preview-kicker">PROJECT / 01</span>
-            <p>Data quality.<br />Better decisions.</p>
+            <p>Reliable data.<br />Clearer insights.</p>
             <div class="pipeline">
-              <span>Validated data</span><span aria-hidden="true">→</span
-              ><span>Forecasting</span>
+              <span>SQL models</span><span aria-hidden="true">→</span
+              ><span>BI reporting</span>
             </div>
-            <span class="preview-footnote">TORONTO · PREDICTIVE ANALYTICS</span>
+            <span class="preview-footnote">HEALTHCARE · BUSINESS INTELLIGENCE</span>
           </div>
           {% else %}
           <div class="notebook-preview">
@@ -160,7 +143,7 @@
   <div>
     <p class="eyebrow">Behind the work</p>
     <h2 id="about-title">
-      Curiosity, structure,<br />and a practical mindset.
+      The engineering behind<br />the insight.
     </h2>
     <a
       class="text-link"
@@ -173,13 +156,10 @@
   </div>
   <div class="about-details">
     <p class="about-intro">
-      I build trustworthy data workflows and practical analytical applications.
+      I connect sound data foundations with clear reporting and useful business decisions.
     </p>
     <p>
-      Based in Ottawa, I combine software engineering and postgraduate training in
-      business intelligence and project management. My work spans Python and SQL
-      pipelines, Power BI reporting, time-series forecasting, and local AI-assisted
-      document review. I value reproducibility, honest evaluation and usable tools.
+      I combine software engineering with postgraduate training in business intelligence and project management. My work covers SQL analysis, Power BI dashboards, data preparation, dimensional modeling and ETL, with additional experience in forecasting and machine learning.
     </p>
     <dl class="capabilities">
       <div>
@@ -208,8 +188,7 @@
       Have a data challenge<br />or an opportunity in mind?
     </h2>
     <p>
-      Get in touch about data analytics, BI development, data engineering,
-      forecasting or applied AI opportunities.
+      I am open to Data Analyst, BI Developer and related data engineering opportunities.
     </p>
   </div>
   <div class="contact-actions">
