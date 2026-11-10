@@ -1,66 +1,25 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Ahmed Ouazzani — Data Analyst and BI Developer in Ottawa. SQL, Python, Power BI, dashboards, ETL, and analytics projects."
-    />
-    <meta name="theme-color" content="#122c36" />
-    <title>
-      {% block title %}Ahmed Ouazzani | Data Analyst &amp; BI Developer{% endblock %}
-    </title>
-    <link
-      rel="icon"
-      href="{{ url_for('static', filename='images/favicon.svg') }}"
-      type="image/svg+xml"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/style.css') }}"
-    />
-    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
-      <nav class="container navigation" aria-label="Main navigation">
-        <a class="brand" href="#home" aria-label="Ahmed Ouazzani, home"
-          ><span class="brand-mark" aria-hidden="true">ao.</span
-          ><span
-            >Ahmed Ouazzani<span class="brand-subtitle"
-              >Data Analyst · BI Developer</span
-            ></span
-          ></a
-        >
-        <ul class="nav-links">
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#about">About</a></li>
-          <li>
-            <a class="nav-contact" href="#contact"
-              >Get in touch <span aria-hidden="true">↗</span></a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main id="main" tabindex="-1">{% block content %}{% endblock %}</main>
-    <footer class="site-footer container">
-      <p>© {{ current_year }} Ahmed Ouazzani</p>
-      <div class="footer-links">
-        <a
-          href="https://github.com/AhmedOT22"
-          target="_blank"
-          rel="noopener noreferrer"
-          >GitHub <span class="sr-only">(opens in a new tab)</span> ↗</a
-        ><a
-          href="https://www.linkedin.com/in/ahmed-ouazzani-5b078b205/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >LinkedIn <span class="sr-only">(opens in a new tab)</span> ↗</a
-        ><a href="#home">Back to top ↑</a>
-      </div>
-    </footer>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ahmed Ouazzani is an Ottawa-based Data Analyst and BI Developer building analytical solutions with SQL, Python, Power BI, and data engineering.">
+  <meta name="theme-color" content="#10232d">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ahmed Ouazzani | Data Analyst & BI Developer">
+  <meta property="og:description" content="Data analytics, business intelligence, engineering and applied machine learning. Explore selected work.">
+  <meta property="og:image" content="{{ url_for('static', filename='images/ahmed-portrait.webp', _external=True) }}">
+  <title>Ahmed Ouazzani | Data Analyst & BI Developer</title>
+  <link rel="icon" href="{{ url_for('static', filename='images/favicon.svg') }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="#home" aria-label="Ahmed Ouazzani, home"><span class="brand-initials">AO<span>.</span></span><span>Ahmed Ouazzani<small>Data Analyst · BI Developer</small></span></a>
+    <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#about">Expertise</a><a class="nav-cta" href="#contact">Contact <span aria-hidden="true">↗</span></a></nav>
+  </div></header>
+  <main id="main">{% block content %}{% endblock %}</main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© {{ current_year }} Ahmed Ouazzani</span><span>Built with care, grounded in evidence.</span><div><a href="https://github.com/AhmedOT22" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/ahmed-ouazzani-5b078b205/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="#home">Top ↑</a></div></div></footer>
+</body>
 </html>
