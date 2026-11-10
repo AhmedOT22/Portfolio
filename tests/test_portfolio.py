@@ -50,7 +50,7 @@ class PortfolioTests(TestCase):
     def test_curated_projects(self):
         self.assertEqual(
             len([a for tag, a in self.page.elements if tag == "article"]),
-            6,
+            5,
         )
         for project in (
             "Hospital Insights Dashboard",
