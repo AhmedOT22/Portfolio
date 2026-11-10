@@ -884,3 +884,44 @@ h1 > span {
     transition: none !important;
   }
 }
+
+/* 2026 portfolio refresh — editorial BI-first visual hierarchy */
+:root { --ink: #142433; --muted: #546878; --accent: #137a72; --accent-dark: #0d5b56; --canvas: #f3f7f7; --line: #dce7e8; --radius: 20px; --width: 1180px; --shadow: 0 18px 46px #122a3714; }
+body { background: #fff; }
+.site-header { background: #ffffffed; backdrop-filter: blur(14px); }
+.navigation { min-height: 82px; }
+.brand-mark { border-radius: 12px; background: #132c3b; }
+.hero { padding-block: 94px 100px; gap: clamp(36px,6vw,96px); grid-template-columns: 1.35fr 0.85fr; }
+.hero-label { font-size: .76rem; letter-spacing: .19em; font-weight: 800; color: #137a72; margin: 22px 0 14px; }
+.hero h1 { font-size: clamp(3.1rem,5.7vw,5.35rem); line-height: 1.075; letter-spacing: -.065em; max-width: 740px; }
+.hero-intro { max-width: 580px; font-size: 1.1rem; line-height: 1.75; }
+.hero-tools { gap: 10px; margin-top: 44px; padding-top: 22px; }
+.hero-tools span { padding: 7px 12px; background: #eef4f4; border: 1px solid #dce9e8; color: #284e59; border-radius: 100px; }
+.portrait { max-width: 360px; border-radius: 24px; box-shadow: 0 26px 55px #152b3420; transform: rotate(1deg); }
+.portrait figcaption { background: #142c3a; }
+.projects-section { padding-block: 92px; }
+.section-heading { margin-bottom: 42px; }
+.section-heading h2 { max-width: 680px; }
+.project-grid { gap: 24px; }
+.project-card { border-radius: 18px; }
+.project-card.featured-project { border-color: #a9cfc8; box-shadow: 0 18px 42px #0e5d5510; }
+.project-card.featured-project .project-body { background: linear-gradient(180deg,#fff 0%,#f9fcfb 100%); }
+.project-visual { height: 208px; }
+.visual-1 { background: #103b47; }
+.project-summary { line-height: 1.65; }
+.project-note { max-width: 880px; }
+.about-section { padding-block: 100px; }
+.contact-section { background: #112f3a; border-radius: 24px; }
+@media (max-width: 850px) {
+  .hero { padding-block: 58px 64px; grid-template-columns: 1fr; }
+  .portrait { transform: none; max-width: 420px; justify-self: start; }
+}
+@media (max-width: 600px) {
+  .hero { padding-block: 38px 52px; }
+  .hero h1 { font-size: clamp(2.6rem, 11vw, 3.5rem); }
+  .hero-tools { gap: 8px; }
+  .hero-tools span { padding: 5px 10px; }
+  .portrait { max-width: none; box-shadow: none; }
+  .projects-section { padding-block: 52px; }
+  .about-section { padding-block: 60px; }
+}
