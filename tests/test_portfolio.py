@@ -77,6 +77,23 @@ class PortfolioTests(TestCase):
         self.assertNotIn("Download résumé", self.html)
         self.assertNotIn("Download resume", self.html)
 
+    def test_technical_stack(self):
+        expected = (
+            "Analytics &amp; Business Intelligence",
+            "Data Engineering",
+            "Machine Learning &amp; Applied AI",
+            "Software Development &amp; Deployment",
+            "Data Warehousing",
+            "Time-Series Forecasting",
+            "Git/GitHub Actions",
+        )
+        for value in expected:
+            with self.subTest(value=value):
+                self.assertIn(value, self.html)
+        self.assertEqual(self.html.count('class="stack-icon"'), 4)
+        self.assertEqual(self.html.count('class="stack-card stack-card-primary"'), 1)
+        self.assertNotIn('>DEV</span>', self.html)
+
     def test_external_links_secure(self):
         links = [attrs for tag, attrs in self.page.elements if tag == "a"]
         self.assertTrue(any(a.get("href", "").startswith("mailto:") for a in links))
