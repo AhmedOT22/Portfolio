@@ -66,6 +66,17 @@ class PortfolioTests(TestCase):
         self.assertIn("Approach, evidence", self.html)
         self.assertIn("Synthetic data", self.html)
 
+    def test_hero_positioning(self):
+        self.assertIn("Make sense of data.", self.html)
+        self.assertIn("streamlining workflows", self.html)
+        self.assertIn("Data Engineering", self.html)
+        self.assertIn("Software Development", self.html)
+        self.assertIn("ETL/ELT", self.html)
+        self.assertIn('href="#work"', self.html)
+        self.assertIn('href="#contact"', self.html)
+        self.assertNotIn("Download résumé", self.html)
+        self.assertNotIn("Download resume", self.html)
+
     def test_external_links_secure(self):
         links = [attrs for tag, attrs in self.page.elements if tag == "a"]
         self.assertTrue(any(a.get("href", "").startswith("mailto:") for a in links))
