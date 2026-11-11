@@ -32,7 +32,6 @@ def export(output_dir="dist"):
         html = html.replace("http://localhost/static/", f"{site_url}/static/")
     else:
         html = html.replace("http://localhost/static/", "https://raw.githubusercontent.com/AhmedOT22/Portfolio/main/static/")
-    html = html.replace('="/static/', '="/static/')
     (output / "index.html").write_text(html, encoding="utf-8")
     copytree(Path(__file__).parent / "static", output / "static")
     print(f"Static portfolio exported to {output.resolve()}")
