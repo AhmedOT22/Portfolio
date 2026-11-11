@@ -66,6 +66,11 @@ class PortfolioTests(TestCase):
         self.assertIn("Approach, evidence", self.html)
         self.assertIn("Synthetic data", self.html)
 
+    def test_air_quality_live_demo(self):
+        self.assertIn("https://air-quality-forecasting1111.streamlit.app/", self.html)
+        self.assertIn("Open Toronto Air Quality Forecasting live demo", self.html)
+        self.assertIn("Source code", self.html)
+
     def test_hero_positioning(self):
         self.assertIn("Make sense of data.", self.html)
         self.assertIn("streamlining workflows", self.html)
