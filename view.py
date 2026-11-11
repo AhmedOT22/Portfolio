@@ -28,6 +28,7 @@ def home():
             ],
             "skills": ["Python", "ETL", "Forecasting", "scikit-learn", "GitHub Actions"],
             "github": "https://github.com/AhmedOT22/Air-Quality-Forecasting",
+            "demo": "https://air-quality-forecasting1111.streamlit.app/",
             "status": "Public source · Retrospective evaluation",
         },
         {
