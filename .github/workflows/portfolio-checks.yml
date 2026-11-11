@@ -29,4 +29,8 @@ jobs:
           test -s dist/static/css/style.css
           test -s dist/static/images/ahmed-portrait.webp
           grep -q "Procurement Contract Analysis" dist/index.html
+          grep -q "Coming soon" dist/index.html
+          grep -q "air-quality-forecasting1111.streamlit.app" dist/index.html
+          ! grep -q "Real Estate Price Estimation" dist/index.html
+          ! grep -q "Loan Eligibility Prediction" dist/index.html
           ! grep -q "Amazon Sales Analysis" dist/index.html
