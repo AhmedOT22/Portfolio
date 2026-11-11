@@ -8,7 +8,7 @@ main = Blueprint("main", __name__)
 @main.route("/")
 def home():
     """Curated public work; limitations are stated explicitly."""
-    # Show evidence-backed work first. Educational demos are secondary.
+    # Three evidence-backed case studies; in-progress private work is clearly labeled.
     featured = [
         {
             "slug": "air",
@@ -58,10 +58,10 @@ def home():
             "number": "03",
             "image": None,
             "image_alt": None,
-            "metric": "84 test contracts",
-            "metric_note": "Offline CUAD clause-detection benchmark",
-            "description": "Developed a local evidence-based contract review tool with cited findings, reviewer corrections and a CAD scenario calculator.",
-            "detail": "Uses React, FastAPI, a constrained evidence model and a separate procurement research warehouse.",
+            "metric": "Coming soon",
+            "metric_note": "Private project · In active development",
+            "description": "Developing a contract-analysis application that connects evidence-based document review, reviewer corrections and CAD cost scenarios.",
+            "detail": "Work in progress using React, FastAPI, a constrained evidence model and a procurement research warehouse.",
             "evidence": [
                 "Review workflow: exact source quotations and a traceable correction history rather than unsupported AI-generated answers.",
                 "Evaluation: rule and classifier approaches benchmarked against 84 held-out CUAD contracts for eight clause types.",
@@ -69,32 +69,13 @@ def home():
             ],
             "skills": ["React", "FastAPI", "Python", "PostgreSQL", "Evaluation"],
             "github": None,
-            "status": "Private prototype · Demonstration on request",
+            "status": "Coming soon · Private repository · In development",
         },
     ]
 
-    additional = [
-        {
-            "title": "Real Estate Price Estimation",
-            "category": "Regression · Streamlit",
-            "description": "Compared regression models and delivered a practical interface for exploring property-price estimates.",
-            "image": "images/realestate.png",
-            "github": "https://github.com/AhmedOT22/Real-Estate-Price-Estimation",
-            "demo": "https://real-estate-price-estimation-utm6wfs9dykdimegfmmwrw.streamlit.app/",
-        },
-        {
-            "title": "Loan Eligibility Prediction",
-            "category": "Classification · Streamlit",
-            "description": "An educational binary classification demo with preprocessing, baseline evaluation and interactive inference; not a lending decision system.",
-            "image": "images/loan.png",
-            "github": "https://github.com/AhmedOT22/Loan-Eligibility-Prediction",
-            "demo": "https://loan-eligibility-prediction-djdstcprojdapfxugpdqwi.streamlit.app/",
-        },
-    ]
     return render_template(
         "index.html",
         featured=featured,
-        additional=additional,
         current_year=datetime.now().year,
     )
 
