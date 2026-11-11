@@ -221,3 +221,19 @@ h1 em,h2 em{color:var(--accent);font-family:var(--serif);font-weight:400}
 .stack-tags li{display:inline-flex;align-items:center;background:#f0f5f5;border:1px solid #e0e9e9;border-radius:7px;color:#31525b;font-size:.74rem;font-weight:650;line-height:1.2;padding:9px 11px;white-space:normal}
 .stack-card-primary .stack-tags li{background:#eaf6f2;border-color:#d6e9e2;color:#255d54}
 @media(max-width:720px){.stack-grid{grid-template-columns:1fr}.stack-card{padding:25px}.stack-card h3{margin-top:16px}.stack-tags{margin-top:19px}}
+
+/* Hero: efficiency-led professional positioning */
+.hero-lead{max-width:655px;margin-top:28px;line-height:1.75}
+.hero-value{max-width:655px;margin-top:18px;color:#536970;font-size:1rem;line-height:1.8}
+.hero-value strong{color:#1b4f50;font-weight:700}
+.hero-actions{margin-top:30px}
+.quick-skills{margin-top:34px}
+.hero-disciplines{max-width:655px;margin-top:20px;color:#355860;font-size:.8rem;font-weight:680;line-height:1.7}
+.hero-disciplines span{color:#a2b6b8;padding-inline:5px}
+.hero-languages{margin-top:9px;color:#76888c;font-size:.75rem;letter-spacing:.01em}
+@media(max-width:600px){
+  .hero-lead{font-size:.96rem;line-height:1.68}
+  .hero-value{font-size:.92rem;line-height:1.7}
+  .hero-disciplines{font-size:.75rem}
+  .hero-disciplines span{padding-inline:2px}
+}
