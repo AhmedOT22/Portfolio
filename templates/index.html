@@ -66,25 +66,14 @@
             <span class="project-status">{{ project.status }}</span>
             <div class="feature-links">
               {% if project.demo %}<a href="{{ project.demo }}" target="_blank" rel="noopener noreferrer" aria-label="Open {{ project.title }} live demo (new tab)">Live demo <span aria-hidden="true">↗</span></a>{% endif %}
-              {% if project.github %}<a href="{{ project.github }}" target="_blank" rel="noopener noreferrer" aria-label="View {{ project.title }} on GitHub (new tab)">Source code <span aria-hidden="true">↗</span></a>{% elif not project.demo %}<span class="private-note">Private project</span>{% endif %}
+              {% if project.github %}<a href="{{ project.github }}" target="_blank" rel="noopener noreferrer" aria-label="View {{ project.title }} on GitHub (new tab)">Source code <span aria-hidden="true">↗</span></a>{% elif not project.demo %}<span class="private-note">Coming soon</span>{% endif %}
             </div>
           </div>
         </div>
       </article>
       {% endfor %}
     </div>
-    <div class="more-heading"><div><span class="section-kicker">ADDITIONAL WORK</span><h3>Other interactive applications</h3></div><a href="https://github.com/AhmedOT22" target="_blank" rel="noopener noreferrer">All repositories <span aria-hidden="true">↗</span></a></div>
-    <div class="other-grid">
-      {% for project in additional %}
-      <article class="other-card">
-        <div class="other-image"><img src="{{ url_for('static', filename=project.image) }}" alt="{{ project.title }} application screenshot" width="640" height="360" loading="lazy"></div>
-        <div class="other-content"><span class="other-category">{{ project.category }}</span><h4>{{ project.title }}</h4><p>{{ project.description }}</p>
-          <div class="other-links"><a href="{{ project.github }}" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a><a href="{{ project.demo }}" target="_blank" rel="noopener noreferrer">Demo <span aria-hidden="true">↗</span></a></div>
-        </div>
-      </article>
-      {% endfor %}
-    </div>
-    <p class="disclosure">Project details distinguish synthetic datasets, retrospective results, and private or unfinished prototypes from verified production work.</p>
+    <p class="disclosure">Project details distinguish synthetic datasets, retrospective results and work in progress from verified production deployments.</p>
   </div>
 </section>
 
