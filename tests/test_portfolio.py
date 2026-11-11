@@ -50,7 +50,7 @@ class PortfolioTests(TestCase):
     def test_curated_projects(self):
         self.assertEqual(
             len([a for tag, a in self.page.elements if tag == "article"]),
-            5,
+            3,
         )
         for project in (
             "Hospital Insights Dashboard",
@@ -61,7 +61,10 @@ class PortfolioTests(TestCase):
         self.assertNotIn("Amazon Sales Analysis", self.html)
         self.assertLess(self.html.index("Toronto Air Quality Forecasting"), self.html.index("Hospital Insights Dashboard"))
         self.assertLess(self.html.index("Hospital Insights Dashboard"), self.html.index("Procurement Contract Analysis"))
-        self.assertIn("Private prototype", self.html)
+        self.assertIn("Coming soon", self.html)
+        self.assertNotIn("Real Estate Price Estimation", self.html)
+        self.assertNotIn("Loan Eligibility Prediction", self.html)
+        self.assertNotIn("ADDITIONAL WORK", self.html)
         self.assertIn("27% lower MAE", self.html)
         self.assertIn("Approach, evidence", self.html)
         self.assertIn("Synthetic data", self.html)
