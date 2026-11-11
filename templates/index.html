@@ -64,7 +64,10 @@
           <ul class="skill-pills" aria-label="Skills used">{% for skill in project.skills %}<li>{{ skill }}</li>{% endfor %}</ul>
           <div class="feature-footer">
             <span class="project-status">{{ project.status }}</span>
-            {% if project.github %}<a href="{{ project.github }}" target="_blank" rel="noopener noreferrer" aria-label="View {{ project.title }} on GitHub (new tab)">View project <span aria-hidden="true">↗</span></a>{% else %}<span class="private-note">Private project</span>{% endif %}
+            <div class="feature-links">
+              {% if project.demo %}<a href="{{ project.demo }}" target="_blank" rel="noopener noreferrer" aria-label="Open {{ project.title }} live demo (new tab)">Live demo <span aria-hidden="true">↗</span></a>{% endif %}
+              {% if project.github %}<a href="{{ project.github }}" target="_blank" rel="noopener noreferrer" aria-label="View {{ project.title }} on GitHub (new tab)">Source code <span aria-hidden="true">↗</span></a>{% elif not project.demo %}<span class="private-note">Private project</span>{% endif %}
+            </div>
           </div>
         </div>
       </article>
