@@ -3,6 +3,7 @@
 Run: python export_static.py
 Deploy the resulting dist/ directory to Cloudflare Pages or another static host.
 """
+import os
 from pathlib import Path
 from shutil import copytree, rmtree
 
@@ -24,9 +25,14 @@ def export(output_dir="dist"):
     if response.status_code != 200:
         raise RuntimeError(f"Homepage returned {response.status_code}")
     html = response.get_data(as_text=True)
-    # Make absolute Flask static URLs portable to a CDN root.
-    html = html.replace('="/static/', '="static/')
-    html = html.replace("http://localhost/static/", "static/")
+    # Root-relative assets work at any pages.dev or custom domain.
+    # Social preview image URLs must remain absolute for sharing services.
+    site_url = os.environ.get("CF_PAGES_URL", "").rstrip("/")
+    if site_url:
+        html = html.replace("http://localhost/static/", f"{site_url}/static/")
+    else:
+        html = html.replace("http://localhost/static/", "https://raw.githubusercontent.com/AhmedOT22/Portfolio/main/static/")
+    html = html.replace('="/static/', '="/static/')
     (output / "index.html").write_text(html, encoding="utf-8")
     copytree(Path(__file__).parent / "static", output / "static")
     print(f"Static portfolio exported to {output.resolve()}")
